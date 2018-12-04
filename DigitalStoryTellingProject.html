@@ -1,8 +1,10 @@
 <!DOCTYPE html>
 <html>
+<head>
 <title>Digital Story Telling Project</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=divice-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -15,7 +17,52 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
 #main {margin-left: 120px}
 /* Remove margins from "page content" on small screens */
 @media only screen and (max-width: 600px) {#main {margin-left: 0}}
+.container {
+  position: relative;
+  width: 50%;
+}
+
+.image {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
+  transform: scale(0);
+  -webkit-transition: .3s ease;
+  transition: .3s ease;
+}
+
+.container:hover .overlay {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+}
+
+.text {
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  text-align: center;
+}
 </style>
+</head>
 <body class="w3-black">
 
 <!-- Icon Bar (Sidebar - hidden on small screens) -->
@@ -68,6 +115,13 @@ body, h1,h2,h3,h4,h5,h6 {font-family: "Montserrat", sans-serif}
  <h3 class="w3-padding-16 w3-text-light-grey">Time Management & Prioritization</h3>
     <p>I found the time management & prioritization lesson to be super meaningful in helping me find a balance between school, studying, extracurriculars, social life, and sleep. At first, planning an entire month to the hour seemed like an extremely daunting task, but it actually proved to be a great way to see how my entire month looked and I felt significantly less stressed. I will admit that I did not use this method for the rest of the months in the semester, but doing it once was still helpful nonetheless because I was familiar with how long certain assignments take me to complete and when I have ample time in my schedule to do them. I think that this lesson was given at a great time because it was right when the assignments started picking up in difficulty and assessments started becoming more regular. 
     </p>
+
+    <div class="container">
+  <img src="SailLogo.jpg" alt="Avatar" class="image">
+  <div class="overlay">
+    <div class="text">SAIL Dimensions</div>
+  </div>
+</div>
 
       <h3 class="w3-padding-16 w3-text-light-grey">Introduction to Career Exploration</h3>
     <p>Some text about me. Some text about me. I am lorem ipsum consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
